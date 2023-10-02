@@ -14,7 +14,7 @@ app.use(cors());
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 
-// Creating "User" Schema
+// Creating Database Schema
 const Schema = mongoose.Schema;
 
 const UserSchema = new Schema({
@@ -43,7 +43,7 @@ const ExerciseSchema = new Schema({
   },
 });
 
-// Creating User Model from User Schema
+// Creating Model from Schema
 const UserModel = mongoose.model("user", UserSchema);
 const ExerciseModel = mongoose.model("exercise", ExerciseSchema);
 
